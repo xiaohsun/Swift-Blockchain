@@ -1,0 +1,40 @@
+{
+  "configurations": [
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:Swift_Blockchain}",
+      "name": "Debug SwiftBlockchain",
+      "program": "${workspaceFolder:Swift_Blockchain}/.build/debug/SwiftBlockchain",
+      "preLaunchTask": "swift: Build Debug SwiftBlockchain"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:Swift_Blockchain}",
+      "name": "Release SwiftBlockchain",
+      "program": "${workspaceFolder:Swift_Blockchain}/.build/release/SwiftBlockchain",
+      "preLaunchTask": "swift: Build Release SwiftBlockchain"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:swift-blockchain}",
+      "name": "Debug BlockchainApp",
+      "program": "${workspaceFolder:swift-blockchain}/.build/debug/BlockchainApp",
+      "preLaunchTask": "swift: Build Debug BlockchainApp"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:swift-blockchain}",
+      "name": "Release BlockchainApp",
+      "program": "${workspaceFolder:swift-blockchain}/.build/release/BlockchainApp",
+      "preLaunchTask": "swift: Build Release BlockchainApp"
+    }
+  ]
+}

@@ -4,7 +4,8 @@ import PackageDescription
 let package = Package(
     name: "SwiftBlockchain",
     platforms: [
-       .macOS(.v13)
+        .macOS(.v10_15),
+        .iOS(.v17)
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.

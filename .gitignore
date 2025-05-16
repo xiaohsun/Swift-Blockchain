@@ -1,3 +1,4 @@
+# Swift Package Manager
 Packages
 .build
 xcuserdata
@@ -9,3 +10,38 @@ db.sqlite
 .env
 .env.*
 !.env.example
+
+# Xcode
+*.xcworkspace
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift build artifacts
+*.o
+*.LinkFileList
+*.hmap
+.build/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Logs
+logs/
+*.log
+
+# Crash files
+crash.log
