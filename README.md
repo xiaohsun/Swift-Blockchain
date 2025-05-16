@@ -11,6 +11,7 @@ This repository implements a blockchain with the following features:
 
 This implementation is inspired by the concepts outlined in the article [Learn Blockchains by Building One](https://hackernoon.com/learn-blockchains-by-building-one-117428612f46) by Daniel van Flymen, adapted to Swift and the Vapor framework.
 <br/>
+<br/>
 
 # Requirements
 
@@ -35,6 +36,7 @@ swift run
 ```
 
 The blockchain server will start on port 8080 by default.
+<br/>
 <br/>
 
 # API Usage
@@ -140,10 +142,12 @@ curl http://localhost:8081/nodes/resolve
 
 This will synchronize node 2 with node 1, accepting the longer chain from node 1.
 <br/>
+<br/>
 
 # Contact
 Author: Bo-Hsun Hsu
 Email: bohsunhsu@gmail.com
+<br/>
 <br/>
 
 # License
