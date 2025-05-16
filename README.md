@@ -1,6 +1,6 @@
 A lightweight blockchain implementation written in Swift using the Vapor framework. This project demonstrates the core concepts of blockchain technology including mining, transactions, and consensus mechanisms.
 <br/>
-<br/>
+
 # Overview
 
 This repository implements a blockchain with the following features:
@@ -11,13 +11,13 @@ This repository implements a blockchain with the following features:
 
 This implementation is inspired by the concepts outlined in the article [Learn Blockchains by Building One](https://hackernoon.com/learn-blockchains-by-building-one-117428612f46) by Daniel van Flymen, adapted to Swift and the Vapor framework.
 <br/>
-<br/>
+
 # Requirements
 
 - Swift 5.8+
 - macOS or Linux
 <br/>
-<br/>
+
 # Getting Started
   
   
@@ -36,7 +36,7 @@ swift run
 
 The blockchain server will start on port 8080 by default.
 <br/>
-<br/>
+
 # API Usage
 
 You can interact with the blockchain API using cURL, Postman, or any HTTP client.
@@ -82,7 +82,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 curl http://localhost:8080/nodes/resolve
 ```
 <br/>
-<br/>
+
 # Testing Multiple Nodes
 
 To test the consensus mechanism, you need to run multiple nodes on different ports:
@@ -140,12 +140,12 @@ curl http://localhost:8081/nodes/resolve
 
 This will synchronize node 2 with node 1, accepting the longer chain from node 1.
 <br/>
-<br/>
+
 # Contact
 Author: Bo-Hsun Hsu
 Email: bohsunhsu@gmail.com
 <br/>
-<br/>
+
 # License
 
 This project is available under the MIT License.
