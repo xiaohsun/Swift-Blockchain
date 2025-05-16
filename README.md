@@ -1,27 +1,134 @@
-# SwiftBlockchain
+# Swift Blockchain
 
-💧 A project built with the Vapor web framework.
+A lightweight blockchain implementation written in Swift using the Vapor framework. This project demonstrates the core concepts of blockchain technology including mining, transactions, and consensus mechanisms.
+
+## Overview
+
+This repository implements a blockchain with the following features:
+- Proof of Work algorithm
+- Transaction validation
+- Consensus mechanism for distributed nodes
+- RESTful API for interaction
+
+## Requirements
+
+- Swift 5.8+
+- macOS or Linux
 
 ## Getting Started
 
-To build the project using the Swift Package Manager, run the following command in the terminal from the root of the project:
+### Build the Project
+
 ```bash
 swift build
 ```
 
-To run the project and start the server, use the following command:
+### Run the Server
+
 ```bash
 swift run
 ```
 
-To execute tests, use the following command:
+The blockchain server will start on port 8080 by default.
+
+## API Usage
+
+You can interact with the blockchain API using cURL, Postman, or any HTTP client.
+
+### View the Blockchain
+
 ```bash
-swift test
+curl http://localhost:8080/chain
 ```
 
-### See more
+### Mine a New Block
 
-- [Vapor Website](https://vapor.codes)
-- [Vapor Documentation](https://docs.vapor.codes)
-- [Vapor GitHub](https://github.com/vapor)
-- [Vapor Community](https://github.com/vapor-community)
+```bash
+curl http://localhost:8080/mine
+```
+
+### Create a New Transaction
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{
+    "sender": "sender-address",
+    "recipient": "recipient-address",
+    "amount": 5
+}' http://localhost:8080/transactions/new
+```
+
+### Register New Nodes
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{
+    "nodes": ["http://localhost:8081"]
+}' http://localhost:8080/nodes/register
+```
+
+### Resolve Consensus Issues
+
+```bash
+curl http://localhost:8080/nodes/resolve
+```
+
+## Testing Multiple Nodes
+
+To test the consensus mechanism, you need to run multiple nodes on different ports:
+
+### Configure and Run a Second Node
+
+Modify the port configuration in `configure.swift` for the second node:
+
+```swift
+// In the second node's configure.swift
+app.http.server.configuration.port = 8081
+```
+
+Run the second node:
+
+```bash
+swift run --working-directory /path/to/second/node
+```
+
+### Register Nodes with Each Other
+
+Register the second node with the first node:
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{
+    "nodes": ["http://localhost:8081"]
+}' http://localhost:8080/nodes/register
+```
+
+Register the first node with the second node:
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{
+    "nodes": ["http://localhost:8080"]
+}' http://localhost:8081/nodes/register
+```
+
+### Test Consensus
+
+Mine a few blocks on the first node:
+
+```bash
+curl http://localhost:8080/mine
+curl http://localhost:8080/mine
+```
+
+Then invoke the consensus mechanism on the second node:
+
+```bash
+curl http://localhost:8081/nodes/resolve
+```
+
+This will synchronize node 2 with node 1, accepting the longer chain from node 1.
+
+## Contact
+Author: Bo-Hsun Hsu
+Email: bohsunhsu@gmail.com
+
+## License
+
+This project is available under the MIT License.
