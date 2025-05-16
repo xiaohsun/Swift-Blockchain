@@ -10,6 +10,8 @@ This repository implements a blockchain with the following features:
 - Consensus mechanism for distributed nodes
 - RESTful API for interaction
 
+This implementation is inspired by the concepts outlined in the article [Learn Blockchains by Building One](https://hackernoon.com/learn-blockchains-by-building-one-117428612f46) by Daniel van Flymen, adapted to Swift and the Vapor framework.
+
 ## Requirements
 
 - Swift 5.8+
