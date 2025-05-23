@@ -21,7 +21,6 @@ This implementation is inspired by the concepts outlined in the article [Learn B
 - Swift 5.8+
 - macOS or Linux
 <br/>
-<br/>
  
 ## Getting Started
   
