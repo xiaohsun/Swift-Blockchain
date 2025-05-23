@@ -1,7 +1,10 @@
+# Blockchain Server in Swift
+
 A lightweight blockchain implementation written in Swift using the Vapor framework. This project demonstrates the core concepts of blockchain technology including mining, transactions, and consensus mechanisms.
 <br/>
-
-# Overview
+<br/>
+ 
+## Overview
 
 This repository implements a blockchain with the following features:
 - Proof of Work algorithm
@@ -13,13 +16,14 @@ This implementation is inspired by the concepts outlined in the article [Learn B
 <br/>
 <br/>
 
-# Requirements
+## Requirements
 
 - Swift 5.8+
 - macOS or Linux
 <br/>
-
-# Getting Started
+<br/>
+ 
+## Getting Started
   
   
 ### Build the Project
@@ -39,7 +43,7 @@ The blockchain server will start on port 8080 by default.
 <br/>
 <br/>
 
-# API Usage
+## API Usage
 
 You can interact with the blockchain API using cURL, Postman, or any HTTP client.
   
@@ -85,7 +89,7 @@ curl http://localhost:8080/nodes/resolve
 ```
 <br/>
 
-# Testing Multiple Nodes
+## Testing Multiple Nodes
 
 To test the consensus mechanism, you need to run multiple nodes on different ports:
   
@@ -144,12 +148,12 @@ This will synchronize node 2 with node 1, accepting the longer chain from node 1
 <br/>
 <br/>
 
-# Contact
+## Contact
 Author: Bo-Hsun Hsu
 Email: bohsunhsu@gmail.com
 <br/>
 <br/>
 
-# License
+## License
 
 This project is available under the MIT License.

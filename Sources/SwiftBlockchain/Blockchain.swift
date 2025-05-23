@@ -19,10 +19,11 @@ class Blockchain: @unchecked Sendable {
     }
     
     init() {
+        // Genesis block
         _ = newBlock(proof: 100, previousHash: "1")
     }
 
-    /// Create a new Block and add it to the end of the chain
+    /// Create a new Block and append it to the chain
     func newBlock(proof: Int, previousHash: String? = nil) -> Block {
         let block = Block(
             index: chain.count + 1,
@@ -101,7 +102,7 @@ class Blockchain: @unchecked Sendable {
         return false
     }
     
-    /// Calculate Proof of Work
+    /// Find a PoW value
     func proofOfWork(lastProof: Int) -> Int {
         var proof = 0
         
@@ -112,7 +113,7 @@ class Blockchain: @unchecked Sendable {
         return proof
     }
     
-    /// Calculate a Block's hash value
+    /// Compute the hash value for a Block
     static func hash(block: Block) -> String {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .sortedKeys
